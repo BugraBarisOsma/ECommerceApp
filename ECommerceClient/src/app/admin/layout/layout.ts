@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Alertify, MessageType, PositionType } from '../../services/admin/alertify';
+
+
 
 @Component({
   selector: 'app-layout',
@@ -8,4 +11,16 @@ import { Component } from '@angular/core';
 })
 export class Layout {
 
+constructor(private alertify : Alertify){
+
 }
+  ngOnInit(): void {
+     this.alertify.message("Merhaba" ,{
+      messageType:MessageType.Success,
+      position : PositionType.BottomLeft,
+      delay:3
+     })
+  }
+  
+}
+
