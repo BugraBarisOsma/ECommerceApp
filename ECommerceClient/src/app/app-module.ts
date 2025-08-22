@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { AdminModule } from './admin/admin-module';
 import { UiModule } from './ui/ui-module';
+import { provideHttpClient } from '@angular/common/http';
 
 
 @NgModule({
@@ -16,10 +17,13 @@ import { UiModule } from './ui/ui-module';
     AppRoutingModule,
     AdminModule,
     UiModule,
+    
 
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
+    {provide:"baseUrl",useValue:"https://localhost:7272/api",multi:true},
+    provideHttpClient()
   ],
   bootstrap: [App]
 })
