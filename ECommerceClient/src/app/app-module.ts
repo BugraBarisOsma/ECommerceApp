@@ -1,11 +1,11 @@
-import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { NgxSpinnerModule } from "ngx-spinner";
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { AdminModule } from './admin/admin-module';
 import { UiModule } from './ui/ui-module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 @NgModule({
   declarations: [
@@ -15,10 +15,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     AdminModule,
-    UiModule
+    UiModule,
+
   ],
   providers: [
-    provideBrowserGlobalErrorListeners()
+    provideBrowserGlobalErrorListeners(),
   ],
   bootstrap: [App]
 })
