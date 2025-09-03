@@ -4,9 +4,13 @@ import { LayoutModule } from './layout/layout-module';
 import { ComponentsModule } from './components/components-module';
 
 
+
+
 // Oncelikle burada layout modulunu import ediyoruz.
 @NgModule({
-  declarations: [],
+  declarations: [
+   
+  ],
   imports: [
     CommonModule,
     LayoutModule,

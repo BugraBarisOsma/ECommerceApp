@@ -54,9 +54,12 @@ this.httpClientService.get({
 // this.httpClientService.delete({
 //   controller:"products"
 // },"0198d130-c11d-7e72-b251-e793164cfeaf"
-// ).subscribe()        
-this.httpClientService.get({
-  fullEndPoint:"https://jsonplaceholder.typicode.com/posts"
-}).subscribe(data => console.log(data))
+// ).subscribe() 
+
+
+// this.httpClientService.get({
+//   fullEndPoint:"https://jsonplaceholder.typicode.com/posts"
+// }).subscribe(data => console.log(data))
+
 }
 }

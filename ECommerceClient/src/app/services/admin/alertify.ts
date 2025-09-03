@@ -13,7 +13,7 @@ declare var alertify : any;
 
 // burada bir helper olarak kullanilacagini varsayabiliriz.
 // alertify icerisinde pek cok fonksiyon var ancak bu fonksiyonlari elle yazdgimizda kullanabiliyoruz
-// yani ide herhangi bir oneri yapmiyor. bundan dolaayi durmadan dokumana bakmamiz gerekiyor
+// yani ide herhangi bir oneri yapmiyor. bundan dolayi durmadan dokumana bakmamiz gerekiyor
 // bundan dolayi bu helper classini olusturduk 
 
 // serviceler yapi olacak farkli moduller icin ayri ayri (burada admin ve ui) veya ortak olarak kullanilabilir. 

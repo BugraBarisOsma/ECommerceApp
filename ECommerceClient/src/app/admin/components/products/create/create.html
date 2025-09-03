@@ -1,0 +1,22 @@
+
+    <mat-form-field class="form-full-width">
+      <mat-label>Name</mat-label>
+      <!-- #txtName ise create.ts dosyasinda name değişkeni için kullanılacak. -->
+      <input matInput placeholder="Product Name" value="Product1234" #txtName>
+    </mat-form-field>
+
+
+    <mat-form-field class="form-full-width">
+        <mat-label>Stock</mat-label>
+        <input matInput placeholder="123" value="100" #txtStock>
+      </mat-form-field>
+
+
+      <mat-form-field class="form-full-width">
+        <mat-label>Price</mat-label>
+        <input matInput placeholder="20.4" value="0" #txtPrice>
+      </mat-form-field>
+
+      <div class="example-button-row">
+        <button matButton="filled" (click)="createProduct(txtName,txtStock,txtPrice)">Create</button>
+      </div>
