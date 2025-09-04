@@ -36,9 +36,18 @@ namespace ECommerceAPI.API.Controllers
 
         // Test amaci ile yazildi
         [HttpGet("All")]
-        public IEnumerable<Product> GetProducts()
+        public async Task<IActionResult> GetProducts()
         {
-            return _productReadRepository.GetAll();     
+            return Ok(_productReadRepository.GetAll(false).Select(p => new
+            {
+                p.Id,
+                p.Name,
+                p.Stock,
+                p.Price,
+                p.CreatedDate,
+                p.UpdatedDate,
+                p.DeletedDate
+            }));   
         }
         [HttpPost]
         public async Task<IActionResult> PostProduct(ProductCreateViewModel product)

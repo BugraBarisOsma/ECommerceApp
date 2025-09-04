@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClientService } from '../http-client-service';
-import { Observable } from 'rxjs';
+import { firstValueFrom, Observable } from 'rxjs';
 import { CreateProduct } from '../../../contracts/CreateProduct';
 import { HttpErrorResponse } from '@angular/common/http';
+import { ListProduct } from '../../../contracts/ListProduct';
 
 @Injectable({
   providedIn: 'root'
@@ -62,4 +63,18 @@ export class Product {
     });
   }
   
+  async listProduct(): Promise<ListProduct[]> {
+    try {
+      const data = await firstValueFrom(
+        this.httpClientService.get<ListProduct[]>({
+          controller: "products",
+          action:"All"
+        })
+      );
+      return data;
+    } catch (error) {
+      console.error("An error has been occured while listing products:", error);
+      throw error;
+    }
+}
 }
